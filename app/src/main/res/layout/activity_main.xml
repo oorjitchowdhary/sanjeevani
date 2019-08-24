@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:id="@+id/logotext"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Sanjeevani"
+            android:textColor="#D81B60"
+            android:textSize="55sp"
+            android:fontFamily="@font/productsans"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/productsans"
+        android:text="creating cancer awareness for good"
+        android:textColor="#D81B60"
+        android:layout_below="@id/logotext"
+        android:gravity="start"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"
+        android:textSize="19sp"/>
+
+    <RelativeLayout
+        android:layout_below="@id/prompt"
+        android:layout_marginTop="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <android.support.design.card.MaterialCardView
+            android:onClick="goToLearn"
+            android:id="@+id/learn_card"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:backgroundTint="#D81B60"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/learnIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/learn"
+                    android:layout_margin="60dp"/>
+
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/learnTV"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/productsans"
+                    android:textStyle="normal"
+                    android:text="Learn"/>
+            </RelativeLayout>
+        </android.support.design.card.MaterialCardView>
+
+        <android.support.design.card.MaterialCardView
+            android:onClick="goToPickup"
+            android:id="@+id/pickup_card"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/learn_card"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="#D81B60">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/pickupIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="40dp" />
+
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/pickupTV"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/productsans"
+                    android:textColor="#fff"
+                    android:textStyle="normal"
+                    android:text="Pickup"/>
+            </RelativeLayout>
+        </android.support.design.card.MaterialCardView>
+
+        <android.support.design.card.MaterialCardView
+            android:onClick="goToAbout"
+            android:id="@+id/about_card"
+            android:layout_below="@id/learn_card"
+            android:layout_marginTop="10dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="#D81B60">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/aboutIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/about"
+                    android:layout_margin="60dp"/>
+
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/aboutTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/productsans"
+                    android:textColor="#fff"
+                    android:textStyle="normal"
+                    android:text="About"/>
+
+            </RelativeLayout>
+        </android.support.design.card.MaterialCardView>
+
+        <android.support.design.card.MaterialCardView
+            android:onClick="goToContact"
+            android:id="@+id/contact_card"
+            android:layout_below="@id/pickup_card"
+            android:layout_toEndOf="@id/about_card"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="#D81B60">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/contactIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mail"
+                    android:layout_margin="60dp"/>
+
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/contactTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/productsans"
+                    android:textColor="#fff"
+                    android:textStyle="normal"
+                    android:text="Contact Us"/>
+
+            </RelativeLayout>
+        </android.support.design.card.MaterialCardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
