@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D81B60"
+    android:background="#FFF"
     tools:context=".ContactUsActivity">
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Contact Us"
-        android:textColor="#fff"
+        android:textColor="@color/colorPrimary"
         android:fontFamily="@font/productsans"
         android:layout_centerHorizontal="true"
         android:gravity="center"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/productsans"
         android:text="Our team is happy to answer any questions. Fill out the form below to drop us an email."
-        android:textColor="#fff"
+        android:textColor="@color/colorPrimary"
         android:layout_below="@id/contact_tv"
         android:layout_centerHorizontal="true"
         android:gravity="center"
@@ -46,18 +46,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxStrokeColor="#fff"
+            app:boxStrokeColor="@color/colorPrimary"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
             android:hint="Name"
-            android:textColorHint="#fff"
+            android:textColorHint="@color/colorPrimary"
             app:hintEnabled="true">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/name"
-                android:textColor="#fff"
+                android:textColor="@color/colorPrimary"
                 android:fontFamily="@font/productsans"
                 android:inputType="textPersonName"/>
 
@@ -67,19 +67,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxStrokeColor="#fff"
+            app:boxStrokeColor="@color/colorPrimary"
             android:hint="Designation"
             android:layout_marginTop="10dp"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
-            android:textColorHint="#fff"
+            android:textColorHint="@color/colorPrimary"
             app:hintEnabled="true">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/designation"
-                android:textColor="#fff"
+                android:textColor="@color/colorPrimary"
                 android:fontFamily="@font/productsans"
                 android:inputType="text"/>
 
@@ -89,11 +89,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxStrokeColor="#fff"
+            app:boxStrokeColor="@color/colorPrimary"
             android:hint="Message"
             android:layout_marginTop="10dp"
             android:layout_marginStart="25dp"
-            android:textColorHint="#fff"
+            android:textColorHint="@color/colorPrimary"
             android:layout_marginEnd="25dp"
             app:hintEnabled="true">
 
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/message"
                 android:fontFamily="@font/productsans"
-                android:textColor="#fff"
+                android:textColor="@color/colorPrimary"
                 android:inputType="textMultiLine"/>
 
         </android.support.design.widget.TextInputLayout>
@@ -117,8 +117,8 @@
             android:layout_marginTop="35dp"
             android:textSize="25sp"
             android:layout_marginStart="45dp"
-            android:backgroundTint="#fff"
-            android:textColor="#D81B60"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="#FFF"
             android:layout_marginEnd="45dp"
             app:cornerRadius="5dp" />
 

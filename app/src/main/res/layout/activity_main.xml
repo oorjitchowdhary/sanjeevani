@@ -20,7 +20,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:src="@drawable/logo"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="3dp"
             android:id="@+id/logo"/>
 
         <TextView
@@ -42,16 +42,9 @@
         android:fontFamily="@font/productsans"
         android:text="creating cancer awareness for good"
         android:textColor="#D81B60"
-<<<<<<< HEAD
         android:textSize="19sp"
         android:layout_centerHorizontal="true"/>
-=======
-        android:layout_below="@id/logotext"
-        android:gravity="start"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="50dp"
-        android:textSize="14sp"/>
->>>>>>> a6d1b5f9227a68edfa8fc49944007355945b9384
+
 
     <LinearLayout
         android:layout_width="match_parent"

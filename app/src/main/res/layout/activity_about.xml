@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D81B60"
+    android:background="#FFF"
     tools:context=".AboutActivity">
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="About Us"
-        android:textColor="#fff"
+        android:textColor="@color/colorPrimary"
         android:fontFamily="@font/productsans"
         android:layout_centerHorizontal="true"
         android:gravity="center"
@@ -38,7 +38,7 @@
             android:text="'with small steps we begin,\nwith consistency we win'"
             android:fontFamily="@font/productsans"
             android:gravity="center"
-            android:textColor="#fff"
+            android:textColor="@color/colorPrimary"
             android:textStyle="italic"
             android:layout_marginBottom="30dp"
             android:textSize="20sp"/>
@@ -53,7 +53,7 @@
             android:gravity="start"
             android:textSize="20sp"
             android:scrollbars="vertical"
-            android:textColor="#fff"/>
+            android:textColor="@color/colorPrimary" />
 
     </LinearLayout>
 
