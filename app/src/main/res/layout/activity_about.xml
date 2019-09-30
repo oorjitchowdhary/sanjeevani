@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D81B60"
     tools:context=".AboutActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/about_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:textColor="#fff"
+        android:fontFamily="@font/productsans"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:layout_marginTop="78dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/about_tv"
+        android:layout_marginTop="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="45dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/para2"
+            android:text="'with small steps we begin,\nwith consistency we win'"
+            android:fontFamily="@font/productsans"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textStyle="italic"
+            android:layout_marginBottom="30dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/para1"
+            android:fontFamily="@font/productsans"
+            android:text="Team Sanjeevani (that's us!) consists of four 16 year old students looking to initiate change and development through a prestigious platform and mega-event: Youth Power.\n\nHeld annually and exclusively in Amity schools like Amity G46, Amity Noida and more, it is an eminent convocation of groups like us that have brought reform to the society with their endeavours. We're representing our school (Amity International School, Sector 46, Gurugram) in the Youth Power, Edition 2020.\n\nWe adopted this topic and are concentrating our efforts so that we can contribute to wiping out one of the most dangerous and traumatic diseases- Cancer (which is responsible for one in every six deaths)."
+            android:layout_centerInParent="true"
+            android:gravity="start"
+            android:textSize="20sp"
+            android:scrollbars="vertical"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

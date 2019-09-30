@@ -30,7 +30,7 @@ public class ContactUsActivity extends AppCompatActivity {
                 String msg_str = message.getText().toString();
 
                 Intent sendMail = new Intent(Intent.ACTION_SEND);
-                sendMail.putExtra(Intent.EXTRA_EMAIL, new String[]{"oorjit.chowdhary@hotmail.com"});
+                sendMail.putExtra(Intent.EXTRA_EMAIL, new String[]{"sanjeevani.YP.ais46@gmail.com"});
                 sendMail.putExtra(Intent.EXTRA_SUBJECT, name_str + " wants to get in touch.");
                 sendMail.putExtra(Intent.EXTRA_TEXT, msg_str);
                 sendMail.setType("message/rfc822");
