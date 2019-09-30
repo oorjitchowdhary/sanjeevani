@@ -42,10 +42,137 @@
         android:fontFamily="@font/productsans"
         android:text="creating cancer awareness for good"
         android:textColor="#D81B60"
+<<<<<<< HEAD
         android:textSize="19sp"
         android:layout_centerHorizontal="true"/>
+=======
+        android:layout_below="@id/logotext"
+        android:gravity="start"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"
+        android:textSize="14sp"/>
+>>>>>>> a6d1b5f9227a68edfa8fc49944007355945b9384
 
-    <RelativeLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/prompt"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:orientation="vertical">
+
+        <android.support.design.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D81B60"
+            android:layout_marginBottom="10dp"
+            android:onClick="goToLearn"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/learn"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Learn"
+                    android:fontFamily="@font/productsans"
+                    android:textColor="#fff"
+                    android:textSize="35sp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+        </android.support.design.card.MaterialCardView>
+
+        <android.support.design.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D81B60"
+            android:onClick="goToAbout"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/about"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="About"
+                    android:fontFamily="@font/productsans"
+                    android:textColor="#fff"
+                    android:textSize="35sp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+        </android.support.design.card.MaterialCardView>
+
+        <android.support.design.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D81B60"
+            android:onClick="goToContact"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="18dp"
+                    android:src="@drawable/mail"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Contact Us"
+                    android:fontFamily="@font/productsans"
+                    android:textColor="#fff"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+        </android.support.design.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <!--<RelativeLayout
         android:layout_below="@id/prompt"
         android:layout_marginTop="35dp"
         android:layout_width="match_parent"
@@ -198,6 +325,6 @@
             </RelativeLayout>
         </android.support.design.card.MaterialCardView>
 
-    </RelativeLayout>
+    </RelativeLayout>-->
 
 </RelativeLayout>

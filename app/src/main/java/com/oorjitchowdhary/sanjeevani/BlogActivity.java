@@ -15,6 +15,6 @@ public class BlogActivity extends AppCompatActivity {
 
         webView = findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://www.ihadcancer.com/h3-blog");
+        webView.loadUrl("https://www.cancer.net/blog");
     }
 }
