@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "994564168963",
+    "firebase_url": "https://sanjeevani-ec8e3.firebaseio.com",
+    "project_id": "sanjeevani-ec8e3",
+    "storage_bucket": "sanjeevani-ec8e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994564168963:android:f1c7fe6cfc7a3375c79d36",
+        "android_client_info": {
+          "package_name": "com.oorjitchowdhary.sanjeevani"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994564168963-lbbei5bj7s8l8785609t9enjbmobdlt6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oorjitchowdhary.sanjeevani",
+            "certificate_hash": "39cb827f4f4685949a24e34cf765367d064f763c"
+          }
+        },
+        {
+          "client_id": "994564168963-6cf54j6tf9cpd8lk09ehab3j55mocskc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl9qZBuciNoHflz_PWeBmYzSQhSkrIkGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994564168963-6cf54j6tf9cpd8lk09ehab3j55mocskc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
