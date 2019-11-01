@@ -133,7 +133,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#D81B60"
             android:onClick="goToContact"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -161,6 +162,42 @@
                     android:layout_gravity="center_vertical"/>
 
             </LinearLayout>
+        </android.support.design.card.MaterialCardView>
+
+        <android.support.design.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D81B60"
+            app:cardCornerRadius="10dp"
+            android:onClick="goToDonate">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="18dp"
+                    android:src="@drawable/ic_local_hospital_black_24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Donate"
+                    android:textSize="30sp"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/productsans"/>
+
+            </LinearLayout>
+
         </android.support.design.card.MaterialCardView>
 
     </LinearLayout>

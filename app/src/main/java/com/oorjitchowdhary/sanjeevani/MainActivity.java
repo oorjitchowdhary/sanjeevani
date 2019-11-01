@@ -28,4 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void goToDonate(View view) {
+        startActivity(new Intent(MainActivity.this, DonateActivity.class));
+    }
 }
