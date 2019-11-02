@@ -25,9 +25,10 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
 
-        /*if (user!=null){
+        if (user!=null){
             startActivity(new Intent(LoginActivity.this, AdminActivity.class));
-        }*/
+            finish();
+        }
     }
 
     public void login(View view) {
@@ -43,7 +44,8 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()){
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
-                            // startActivity(new Intent(LoginActivity.this, AdminActivity.class))
+                            startActivity(new Intent(LoginActivity.this, AdminActivity.class));
+                            finish();
                         } else {
                             Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
