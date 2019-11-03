@@ -1,6 +1,9 @@
 package com.oorjitchowdhary.sanjeevani.Models;
 
-public class Doner {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Doner implements Parcelable {
 
     private String name;
     private String age;
@@ -16,6 +19,25 @@ public class Doner {
 
     public Doner() {
     }
+
+    protected Doner(Parcel in) {
+        name = in.readString();
+        age = in.readString();
+        address = in.readString();
+        bloodgroup = in.readString();
+    }
+
+    public static final Creator<Doner> CREATOR = new Creator<Doner>() {
+        @Override
+        public Doner createFromParcel(Parcel in) {
+            return new Doner(in);
+        }
+
+        @Override
+        public Doner[] newArray(int size) {
+            return new Doner[size];
+        }
+    };
 
     public String getName() {
         return name;
@@ -57,5 +79,18 @@ public class Doner {
                 ", address='" + address + '\'' +
                 ", bloodgroup='" + bloodgroup + '\'' +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(name);
+        parcel.writeString(age);
+        parcel.writeString(address);
+        parcel.writeString(bloodgroup);
     }
 }

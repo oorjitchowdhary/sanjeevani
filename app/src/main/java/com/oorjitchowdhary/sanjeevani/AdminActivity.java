@@ -23,7 +23,7 @@ import com.oorjitchowdhary.sanjeevani.Util.VerticalSpacingItemDecorator;
 
 import java.util.ArrayList;
 
-public class AdminActivity extends AppCompatActivity {
+public class AdminActivity extends AppCompatActivity implements DonationsRecyclerAdapter.OnDonationListener {
 
     private RecyclerView mRecyclerView;
     private ArrayList<Doner> mDonations = new ArrayList<>();
@@ -82,8 +82,15 @@ public class AdminActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(linearLayoutManager);
         VerticalSpacingItemDecorator itemDecorator = new VerticalSpacingItemDecorator(12);
         mRecyclerView.addItemDecoration(itemDecorator);
-        mDonationsRecyclerAdapter = new DonationsRecyclerAdapter(mDonations);
+        mDonationsRecyclerAdapter = new DonationsRecyclerAdapter(mDonations, this);
         mRecyclerView.setAdapter(mDonationsRecyclerAdapter);
 
+    }
+
+    @Override
+    public void OnDonationClick(int position) {
+        Intent intent = new Intent(this, DonationActivity.class);
+        intent.putExtra("selected_donation", mDonations.get(position));
+        startActivity(intent);
     }
 }

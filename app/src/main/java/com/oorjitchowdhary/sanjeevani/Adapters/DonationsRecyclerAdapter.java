@@ -14,9 +14,11 @@ import com.oorjitchowdhary.sanjeevani.R;
 public class DonationsRecyclerAdapter extends RecyclerView.Adapter<DonationsRecyclerAdapter.ViewHolder> {
 
     private ArrayList<Doner> mDonations = new ArrayList<>();
+    private OnDonationListener mOnDonationListener;
 
-    public DonationsRecyclerAdapter(ArrayList<Doner> mDonations) {
+    public DonationsRecyclerAdapter(ArrayList<Doner> mDonations, OnDonationListener onDonationListener) {
         this.mDonations = mDonations;
+        this.mOnDonationListener = onDonationListener;
     }
 
 
@@ -24,7 +26,7 @@ public class DonationsRecyclerAdapter extends RecyclerView.Adapter<DonationsRecy
     @Override
     public DonationsRecyclerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_listitem, viewGroup, false);
-        return new ViewHolder(view);
+        return new ViewHolder(view, mOnDonationListener);
     }
 
     @Override
@@ -37,12 +39,25 @@ public class DonationsRecyclerAdapter extends RecyclerView.Adapter<DonationsRecy
         return mDonations.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView name;
+        OnDonationListener onDonationListener;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView, OnDonationListener onDonationListener) {
             super(itemView);
             name = itemView.findViewById(R.id.name_tv);
+
+            this.onDonationListener = onDonationListener;
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View view) {
+            onDonationListener.OnDonationClick(getAdapterPosition());
+        }
+    }
+
+    public interface OnDonationListener {
+        void OnDonationClick(int position);
     }
 }
