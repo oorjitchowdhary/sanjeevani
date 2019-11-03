@@ -31,4 +31,11 @@ public class MainActivity extends AppCompatActivity {
     public void goToDonate(View view) {
         startActivity(new Intent(MainActivity.this, DonateActivity.class));
     }
+<<<<<<< HEAD
+=======
+
+    public void goToLogin(View view) {
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+    }
+>>>>>>> 67957d3bfa916ea9aca97158a6229fbea49c9e4e
 }
