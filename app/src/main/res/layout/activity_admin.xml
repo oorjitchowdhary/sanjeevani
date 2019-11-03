@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminActivity"
+    android:background="#fff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DONATIONS"
+        android:textSize="45sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="78dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/productsans"
+        android:textStyle="bold"
+        android:id="@+id/donations_tv"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/donations_tv"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/recyclerview"
+        android:layout_above="@id/logout_button"/>
+
+    <android.support.design.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout_button"
+        android:layout_alignParentBottom="true"
+        android:text="LOGOUT"
+        android:textSize="25sp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#fff"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        android:fontFamily="@font/productsans"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        android:onClick="logout"/>
+
+</RelativeLayout>

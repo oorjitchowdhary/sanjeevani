@@ -200,6 +200,22 @@
 
         </android.support.design.card.MaterialCardView>
 
+<<<<<<< HEAD
+=======
+        <android.support.design.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Are you an admin? Login."
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/productsans"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:onClick="goToLogin"/>
+
+>>>>>>> 67957d3bfa916ea9aca97158a6229fbea49c9e4e
     </LinearLayout>
 
     <!--<RelativeLayout
