@@ -1,6 +1,6 @@
 package com.oorjitchowdhary.sanjeevani;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -9,11 +9,7 @@ import com.oorjitchowdhary.sanjeevani.Models.Doner;
 public class DonationActivity extends AppCompatActivity {
 
     private Doner mDonations;
-    private TextView name_text;
-    private TextView age_text;
-    private TextView address_text;
-    private TextView bloodgroup_text;
-    private static final String TAG = "DonationActivity";
+    private TextView name_text, age_text, address_text, bloodgroup_text, message_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +20,7 @@ public class DonationActivity extends AppCompatActivity {
         age_text = findViewById(R.id.age_details);
         address_text = findViewById(R.id.address_details);
         bloodgroup_text = findViewById(R.id.bloodgroup_details);
+        message_text = findViewById(R.id.message_details);
 
         if (getIntent().hasExtra("selected_donation")){
             mDonations = getIntent().getParcelableExtra("selected_donation");
@@ -32,9 +29,10 @@ public class DonationActivity extends AppCompatActivity {
     }
 
     private void setDonationProperties() {
-        name_text.setText("Name: " + mDonations.getName());
-        age_text.setText("Age: " + mDonations.getAge());
-        address_text.setText("Address: " + mDonations.getAddress());
+        name_text.setText(mDonations.getName());
+        age_text.setText( mDonations.getAge() + " years old | " + mDonations.getGender());
+        address_text.setText(mDonations.getAddress());
         bloodgroup_text.setText("Blood group: " + mDonations.getBloodgroup());
+        message_text.setText(mDonations.getMessage());
     }
 }

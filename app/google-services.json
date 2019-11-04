@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "994564168963-gkut9vc7gvke8uh955ufq50u51sgcmr3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oorjitchowdhary.sanjeevani",
+            "certificate_hash": "407b134aebc0ce16bef33aec66d81fa389187d72"
+          }
+        },
+        {
           "client_id": "994564168963-lbbei5bj7s8l8785609t9enjbmobdlt6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

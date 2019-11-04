@@ -19,7 +19,7 @@
         android:textStyle="bold"
         android:id="@+id/donations_tv"/>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="30dp"
@@ -30,7 +30,7 @@
         android:id="@+id/recyclerview"
         android:layout_above="@id/logout_button"/>
 
-    <android.support.design.button.MaterialButton
+    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/logout_button"

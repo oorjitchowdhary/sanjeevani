@@ -1,9 +1,9 @@
 package com.oorjitchowdhary.sanjeevani;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.design.widget.TextInputEditText;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import com.google.android.material.textfield.TextInputEditText;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -24,14 +24,9 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
-
-        if (user!=null){
-            startActivity(new Intent(LoginActivity.this, AdminActivity.class));
-            finish();
-        }
     }
 
-    public void login(View view) {
+    public void logIn(View view) {
         TextInputEditText emailet = findViewById(R.id.email);
         TextInputEditText passwordet = findViewById(R.id.password);
         String email = emailet.getText().toString();

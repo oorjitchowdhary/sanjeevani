@@ -5,16 +5,15 @@ import android.os.Parcelable;
 
 public class Doner implements Parcelable {
 
-    private String name;
-    private String age;
-    private String address;
-    private String bloodgroup;
+    private String name, age, address, bloodgroup, gender, message;
 
-    public Doner(String name, String age, String address, String bloodgroup) {
+    public Doner(String name, String age, String address, String bloodgroup, String gender) {
         this.name = name;
         this.age = age;
         this.address = address;
         this.bloodgroup = bloodgroup;
+        this.gender = gender;
+        this.message = message;
     }
 
     public Doner() {
@@ -25,6 +24,8 @@ public class Doner implements Parcelable {
         age = in.readString();
         address = in.readString();
         bloodgroup = in.readString();
+        gender = in.readString();
+        message = in.readString();
     }
 
     public static final Creator<Doner> CREATOR = new Creator<Doner>() {
@@ -71,6 +72,22 @@ public class Doner implements Parcelable {
         this.bloodgroup = bloodgroup;
     }
 
+    public String getGender(){
+        return gender;
+    }
+
+    public void setGender(String gender){
+        this.gender = gender;
+    }
+
+    public String getMessage(){
+        return message;
+    }
+
+    public void setMessage(String message){
+        this.message = message;
+    }
+
     @Override
     public String toString() {
         return "Doner{" +
@@ -78,6 +95,8 @@ public class Doner implements Parcelable {
                 ", age='" + age + '\'' +
                 ", address='" + address + '\'' +
                 ", bloodgroup='" + bloodgroup + '\'' +
+                ", gender='" + gender + '\'' +
+                ", message='" + message + '\'' +
                 '}';
     }
 
@@ -92,5 +111,7 @@ public class Doner implements Parcelable {
         parcel.writeString(age);
         parcel.writeString(address);
         parcel.writeString(bloodgroup);
+        parcel.writeString(gender);
+        parcel.writeString(message);
     }
 }

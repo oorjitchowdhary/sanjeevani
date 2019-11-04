@@ -11,21 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
         <activity android:name=".DonateActivity"></activity>
-=======
         <activity android:name=".DonationActivity"></activity>
         <activity android:name=".AdminActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".DonateActivity" />
->>>>>>> 67957d3bfa916ea9aca97158a6229fbea49c9e4e
         <activity android:name=".AboutActivity" />
         <activity android:name=".BlogActivity" />
         <activity android:name=".ContactUsActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashScreen">
-
-        <!--    <activity android:name=".AdminActivity">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -8,67 +8,57 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
         android:id="@+id/logotext"
-        android:layout_marginStart="20dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
         android:layout_centerHorizontal="true">
 
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/logo"
-            android:layout_marginTop="3dp"
-            android:id="@+id/logo"/>
-
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:text="Sanjeevani"
-            android:textColor="#D81B60"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_gravity="center"
             android:textSize="55sp"
             android:fontFamily="@font/productsans"/>
+
+        <TextView
+            android:id="@+id/prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/productsans"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="creating cancer awareness for good"
+            android:textColor="@color/colorPrimary"
+            android:textSize="19sp"/>
+
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/prompt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logotext"
-        android:layout_marginEnd="54dp"
-        android:fontFamily="@font/productsans"
-        android:text="creating cancer awareness for good"
-        android:textColor="#D81B60"
-        android:textSize="19sp"
-        android:layout_centerHorizontal="true"/>
-
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/prompt"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/logotext"
         android:layout_centerInParent="true"
-        android:layout_marginTop="55dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical">
 
-        <android.support.design.card.MaterialCardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#D81B60"
             android:layout_marginBottom="10dp"
+            android:backgroundTint="#D81B60"
             android:onClick="goToLearn"
             app:cardCornerRadius="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="15dp"
                 android:orientation="horizontal">
@@ -77,300 +67,141 @@
                     android:layout_width="65dp"
                     android:layout_height="65dp"
                     android:layout_marginEnd="20dp"
-                    android:src="@drawable/learn"/>
+                    android:src="@drawable/learn" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Learn"
-                    android:fontFamily="@font/productsans"
-                    android:textColor="#fff"
-                    android:textSize="35sp"
-                    android:gravity="center"
-                    android:layout_gravity="center_vertical"/>
-
-            </LinearLayout>
-        </android.support.design.card.MaterialCardView>
-
-        <android.support.design.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#D81B60"
-            android:onClick="goToAbout"
-            android:layout_marginBottom="10dp"
-            app:cardCornerRadius="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="15dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="20dp"
-                    android:src="@drawable/about"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="About"
-                    android:fontFamily="@font/productsans"
-                    android:textColor="#fff"
-                    android:textSize="35sp"
-                    android:gravity="center"
-                    android:layout_gravity="center_vertical"/>
-
-            </LinearLayout>
-        </android.support.design.card.MaterialCardView>
-
-        <android.support.design.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#D81B60"
-            android:onClick="goToContact"
-            app:cardCornerRadius="10dp"
-            android:layout_marginBottom="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="15dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="18dp"
-                    android:src="@drawable/mail"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Contact Us"
-                    android:fontFamily="@font/productsans"
-                    android:textColor="#fff"
-                    android:textSize="30sp"
-                    android:gravity="center"
-                    android:layout_gravity="center_vertical"/>
-
-            </LinearLayout>
-        </android.support.design.card.MaterialCardView>
-
-        <android.support.design.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#D81B60"
-            app:cardCornerRadius="10dp"
-            android:onClick="goToDonate">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="15dp">
-
-                <ImageView
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:layout_marginEnd="18dp"
-                    android:src="@drawable/ic_local_hospital_black_24dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Donate"
-                    android:textSize="30sp"
-                    android:textColor="#fff"
-                    android:gravity="center"
                     android:layout_gravity="center_vertical"
-                    android:fontFamily="@font/productsans"/>
+                    android:fontFamily="@font/productsans"
+                    android:gravity="center"
+                    android:text="Learn"
+                    android:textColor="#fff"
+                    android:textSize="35sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#D81B60"
+            android:onClick="goToAbout"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/about" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/productsans"
+                    android:gravity="center"
+                    android:text="About"
+                    android:textColor="#fff"
+                    android:textSize="35sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#D81B60"
+            android:onClick="goToContact"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="18dp"
+                    android:src="@drawable/mail" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/productsans"
+                    android:gravity="center"
+                    android:text="Contact Us"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D81B60"
+            android:onClick="goToDonate"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="18dp"
+                    android:src="@drawable/ic_local_hospital_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/productsans"
+                    android:gravity="center"
+                    android:text="Donate"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
 
             </LinearLayout>
 
-        </android.support.design.card.MaterialCardView>
+        </com.google.android.material.card.MaterialCardView>
 
-<<<<<<< HEAD
-=======
-        <android.support.design.button.MaterialButton
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Are you an admin? Login."
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:textColor="@color/colorPrimary"
-            android:fontFamily="@font/productsans"
-            android:textAlignment="center"
             android:layout_marginTop="15dp"
-            android:onClick="goToLogin"/>
-
->>>>>>> 67957d3bfa916ea9aca97158a6229fbea49c9e4e
+            android:fontFamily="@font/productsans"
+            android:onClick="goToLogin"
+            android:text="Are you an admin? Login."
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
     </LinearLayout>
-
-    <!--<RelativeLayout
-        android:layout_below="@id/prompt"
-        android:layout_marginTop="35dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:gravity="center">
-
-        <android.support.design.card.MaterialCardView
-            android:onClick="goToLearn"
-            android:id="@+id/learn_card"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:backgroundTint="#D81B60"
-            app:cardCornerRadius="10dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/learnIV"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/learn"
-                    android:layout_margin="60dp"/>
-
-                <TextView
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/learnTV"
-                    android:layout_marginBottom="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:textColor="#fff"
-                    android:fontFamily="@font/productsans"
-                    android:textStyle="normal"
-                    android:text="Learn"/>
-            </RelativeLayout>
-        </android.support.design.card.MaterialCardView>
-
-        <android.support.design.card.MaterialCardView
-            android:onClick="goToPickup"
-            android:id="@+id/pickup_card"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:layout_marginStart="5dp"
-            android:layout_toEndOf="@id/learn_card"
-            app:cardCornerRadius="10dp"
-            android:backgroundTint="#D81B60">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/pickupIV"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="40dp" />
-
-                <TextView
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/pickupTV"
-                    android:layout_marginBottom="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:fontFamily="@font/productsans"
-                    android:textColor="#fff"
-                    android:textStyle="normal"
-                    android:text="Pickup"/>
-            </RelativeLayout>
-        </android.support.design.card.MaterialCardView>
-
-        <android.support.design.card.MaterialCardView
-            android:onClick="goToAbout"
-            android:id="@+id/about_card"
-            android:layout_below="@id/learn_card"
-            android:layout_marginTop="10dp"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            app:cardCornerRadius="10dp"
-            android:backgroundTint="#D81B60">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/aboutIV"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/about"
-                    android:layout_margin="60dp"/>
-
-                <TextView
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/aboutTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:layout_marginBottom="20dp"
-                    android:fontFamily="@font/productsans"
-                    android:textColor="#fff"
-                    android:textStyle="normal"
-                    android:text="About"/>
-
-            </RelativeLayout>
-        </android.support.design.card.MaterialCardView>
-
-        <android.support.design.card.MaterialCardView
-            android:onClick="goToContact"
-            android:id="@+id/contact_card"
-            android:layout_below="@id/pickup_card"
-            android:layout_toEndOf="@id/about_card"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="5dp"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            app:cardCornerRadius="10dp"
-            android:backgroundTint="#D81B60">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/contactIV"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/mail"
-                    android:layout_margin="60dp"/>
-
-                <TextView
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/contactTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:layout_marginBottom="20dp"
-                    android:fontFamily="@font/productsans"
-                    android:textColor="#fff"
-                    android:textStyle="normal"
-                    android:text="Contact Us"/>
-
-            </RelativeLayout>
-        </android.support.design.card.MaterialCardView>
-
-    </RelativeLayout>-->
 
 </RelativeLayout>

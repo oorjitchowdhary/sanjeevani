@@ -1,11 +1,11 @@
 package com.oorjitchowdhary.sanjeevani;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -67,6 +67,8 @@ public class AdminActivity extends AppCompatActivity implements DonationsRecycle
                                 donation.setAge(documentSnapshot.getString("age"));
                                 donation.setAddress(documentSnapshot.getString("address"));
                                 donation.setBloodgroup(documentSnapshot.getString("blood group"));
+                                donation.setGender(documentSnapshot.getString("gender"));
+                                donation.setMessage(documentSnapshot.getString("message"));
                                 mDonations.add(donation);
                             }
                             mDonationsRecyclerAdapter.notifyDataSetChanged();
